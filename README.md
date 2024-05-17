@@ -1,4 +1,4 @@
-# Aplicació de Notícies amb Flask
+# Aplicació de Notícies amb Flask UF3-Projecte
 
 Aquesta aplicació creada a M04 permet veure notícies de diverses seccions de La Vanguardia en una interfície web. El projecte està desenvolupat amb Flask, un microframework de Python.
 
