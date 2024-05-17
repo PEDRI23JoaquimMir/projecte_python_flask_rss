@@ -51,12 +51,10 @@ L'aplicació té dues maneres de funcionar: mode remot i mode local. Com diu l'e
 
 En aquest mode, l'aplicació utilitza fitxers XML descarregats prèviament que es troben a la carpeta `rss/lavanguardia`.
 
-Per canviar entre els dos modes, modifica la funció `get_rss_lavanguardia` a `app.py`:
+Per canviar entre els dos modes, modifico la funció `get_rss_lavanguardia` a `app.py`:
 
 ```python
 def get_rss_lavanguardia(seccio):
-    # MODE REMOT: Descomenta la següent línia per utilitzar el mode remot
-    # xml = f"https://www.lavanguardia.com/rss/{seccio}.xml"
     
     # MODE LOCAL: Comenta la següent línia per desactivar el mode local
     xml = f"./rss/lavanguardia/{seccio}.xml"
