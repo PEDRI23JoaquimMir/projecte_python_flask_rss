@@ -6,3 +6,57 @@ img {
     width: 400px;
     height: auto;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    margin: 0;
+    padding: 0;
+}
+
+header, main {
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.channel-logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+.news-item {
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    background-color: #fff;
+    padding: 15px;
+}
+
+.news-item h2 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.news-item p {
+    margin-bottom: 10px;
+}
+
+.news-item .media-content img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.carousel-inner img {
+    height: 600px;
+    object-fit: cover;
+}

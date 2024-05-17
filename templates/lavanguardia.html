@@ -5,16 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Vanguardia - {{rss.feed.title}}</title>
     <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <h1>La Vanguardia - <small>{{rss.feed.title}}</small></h1>
-    {% for item in rss.entries %}
-        <p>
-            <a href="{{item.link}}">{{item.title}}</a>
-            {% for media in item.media_content %}
-                <p><img src="{{media.url}}" alt="{{item.title}}" /></p>
+    <header class="container">
+        <h1>La Vanguardia - <small>{{rss.feed.title}}</small></h1>
+        {% if rss.feed.image %}
+            <div class="channel-logo mb-3">
+                <img src="{{rss.feed.image.href}}" alt="Logo de {{rss.feed.title}}" class="img-fluid">
+            </div>
+        {% endif %}
+        <p><a href="{{rss.feed.link}}">{{rss.feed.link}}</a></p>
+    </header>
+    <main class="container">
+        <div class="row">
+            {% for item in rss.entries %}
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <article class="news-item card">
+                        <div class="card-body">
+                            <h2 class="card-title"><a href="{{item.link}}">{{item.title}}</a></h2>
+                            {% if item.author %}
+                                <p><strong>Autor:</strong> {{item.author}}</p>
+                            {% endif %}
+                            {% if item.published %}
+                                <p><strong>Data de Creació:</strong> {{item.published}}</p>
+                            {% endif %}
+                            {% if item.updated %}
+                                <p><strong>Data de Modificació:</strong> {{item.updated}}</p>
+                            {% endif %}
+                            {% if item.category %}
+                                <p><strong>Categoria:</strong> {{item.category}}</p>
+                            {% endif %}
+                            <p>{{item.description}}</p>
+                            {% for media in item.media_content %}
+                                <div class="media-content">
+                                    <img src="{{media.url}}" alt="{{item.title}}" class="img-fluid">
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </article>
+                </div>
             {% endfor %}
-        </p>
-    {% endfor %}
+        </div>
+    </main>
+    
 </body>
 </html>
