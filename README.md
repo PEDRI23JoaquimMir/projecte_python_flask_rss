@@ -9,7 +9,7 @@ Aquesta aplicació creada a M04 permet veure notícies de diverses seccions de L
 
 ## Configuració de l'entorn virtual
 
-Pel que tinc entès, per aïllar les dependències del projecte, és recomanable utilitzar un entorn virtual.
+Pel que tinc entès, per aïllar les dependències del projecte, és recomanable utilitzar un entorn virtual, suposo que es obligatori fer-ho amb entorn.
 
 1. Creo un entorn virtual a la carpeta del projecte:
 
@@ -49,7 +49,7 @@ L'aplicació té dues maneres de funcionar: mode remot i mode local. Com diu l'e
 
 ### Mode local
 
-En aquest mode, l'aplicació utilitza fitxers XML descarregats prèviament que es troben a la carpeta `rss/lavanguardia`.
+En aquest mode, l'aplicació utilitza els fitxers XML que he descarregat prèviament que es troben a la carpeta `rss/lavanguardia`.
 
 Per canviar entre els dos modes, modifica la funció `get_rss_lavanguardia` a `app.py`:
 
@@ -64,3 +64,20 @@ def get_rss_lavanguardia(seccio):
     rss = feedparser.parse(xml)
     return rss
 ```
+
+
+## Funcionalitats implementades
+
+### Barra de navegació: 
+La pàgina principal (index.html) conté una barra de navegació que permet accedir a les diferents seccions de notícies. Aquesta barra de navegació també es troba a les pàgines de les diferents seccions per facilitar la navegació sense haver de tornar enrere.
+
+### Carousel d'imatges:
+A la pàgina principal hi ha un carousel d'imatges que mostra diverses imatges representatives.
+
+### Visualització de notícies: 
+Les notícies es mostren en un disseny responsiu. A la pàgina lavanguardia.html, les notícies es disposen en una quadrícula (grid) que varia segons la mida de la pantalla: 1 columna per pantalles petites, 2 columnes per pantalles mitjanes, 3 columnes per pantalles grans i 4 columnes per pantalles molt grans.
+
+
+## Conclusions
+
+Durant el desenvolupament d'aquest projecte, he après utilitzar Flask per crear l'aplicacions web, Configurar i treballar amb entorns virtuals a Python, Fer servir plantilles HTML amb Jinja per generar contingut dinàmic, Implementar dissenys responsius utilitzant Bootstrap, Gestionar el contingut RSS amb la llibreria feedparser, Implementar una barra de navegació coherent a través de diferents pàgines per millorar l'experiència d'usuari.
