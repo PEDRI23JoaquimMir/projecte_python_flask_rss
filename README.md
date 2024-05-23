@@ -1,4 +1,4 @@
-# Aplicació de Notícies amb Flask
+# Aplicació de Notícies amb Flask UF3-Projecte
 
 Aquesta aplicació creada a M04 permet veure notícies de diverses seccions de La Vanguardia en una interfície web. El projecte està desenvolupat amb Flask, un microframework de Python.
 
@@ -51,12 +51,10 @@ L'aplicació té dues maneres de funcionar: mode remot i mode local. Com diu l'e
 
 En aquest mode, l'aplicació utilitza els fitxers XML que he descarregat prèviament que es troben a la carpeta `rss/lavanguardia`.
 
-Per canviar entre els dos modes, modifica la funció `get_rss_lavanguardia` a `app.py`:
+Per canviar entre els dos modes, modifico la funció `get_rss_lavanguardia` a `app.py`:
 
 ```python
 def get_rss_lavanguardia(seccio):
-    # MODE REMOT: Descomenta la següent línia per utilitzar el mode remot
-    # xml = f"https://www.lavanguardia.com/rss/{seccio}.xml"
     
     # MODE LOCAL: Comenta la següent línia per desactivar el mode local
     xml = f"./rss/lavanguardia/{seccio}.xml"
@@ -81,3 +79,27 @@ Les notícies es mostren en un disseny responsiu. A la pàgina lavanguardia.html
 ## Conclusions
 
 Durant el desenvolupament d'aquest projecte, he après utilitzar Flask per crear l'aplicacions web, Configurar i treballar amb entorns virtuals a Python, Fer servir plantilles HTML amb Jinja per generar contingut dinàmic, Implementar dissenys responsius utilitzant Bootstrap, Gestionar el contingut RSS amb la llibreria feedparser, Implementar una barra de navegació coherent a través de diferents pàgines per millorar l'experiència d'usuari.
+
+
+## Scripts utilitzats
+
+Per millorar la funcionalitat i el disseny de l'aplicació, he utilitzat scripts externs de Bootstrap i jQuery. Aquests scripts són necessaris per al funcionament correcte del carousel i altres components de la interfície d'usuari. Els scripts inclosos són:
+
+### jQuery: Llibreria JavaScript necessària per a Bootstrap.
+
+```
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+```
+
+
+### Popper.js: Llibreria per gestionar popups i tooltips, utilitzada per Bootstrap.
+
+```
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js">
+```
+
+### Bootstrap JS: Llibreria JavaScript de Bootstrap per a components interactius com el carousel.
+
+```
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+```
