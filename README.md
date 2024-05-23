@@ -76,11 +76,6 @@ A la pàgina principal hi ha un carousel d'imatges que mostra diverses imatges r
 Les notícies es mostren en un disseny responsiu. A la pàgina lavanguardia.html, les notícies es disposen en una quadrícula (grid) que varia segons la mida de la pantalla: 1 columna per pantalles petites, 2 columnes per pantalles mitjanes, 3 columnes per pantalles grans i 4 columnes per pantalles molt grans.
 
 
-## Conclusions
-
-Durant el desenvolupament d'aquest projecte, he après utilitzar Flask per crear l'aplicacions web, Configurar i treballar amb entorns virtuals a Python, Fer servir plantilles HTML amb Jinja per generar contingut dinàmic, Implementar dissenys responsius utilitzant Bootstrap, Gestionar el contingut RSS amb la llibreria feedparser, Implementar una barra de navegació coherent a través de diferents pàgines per millorar l'experiència d'usuari.
-
-
 ## Scripts utilitzats
 
 Per millorar la funcionalitat i el disseny de l'aplicació, he utilitzat scripts externs de Bootstrap i jQuery. Aquests scripts són necessaris per al funcionament correcte del carousel i altres components de la interfície d'usuari. Els scripts inclosos són:
@@ -103,3 +98,7 @@ Per millorar la funcionalitat i el disseny de l'aplicació, he utilitzat scripts
 ```
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
 ```
+
+## Conclusions
+
+Durant el desenvolupament d'aquest projecte, he après utilitzar Flask per crear l'aplicacions web, Configurar i treballar amb entorns virtuals a Python, Fer servir plantilles HTML amb Jinja per generar contingut dinàmic, Implementar dissenys responsius utilitzant Bootstrap, Gestionar el contingut RSS amb la llibreria feedparser, Implementar una barra de navegació coherent a través de diferents pàgines per millorar l'experiència d'usuari.
